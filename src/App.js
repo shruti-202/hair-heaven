@@ -1,41 +1,34 @@
 import "./App.css";
-import logo from "./logo.png";
+import Mockman from "mockman-js";
+import { Routes, Route } from "react-router-dom";
+import Navigation from "./components/Navbar/Navigation";
+import AllProduct from "./pages/Product/AllProduct";
+import NotFound from "./pages/404/404";
+import Help from "./pages/Help/Help";
+import Reviews from "./pages/Reviews/Reviews";
+import Trial from "./pages/Trial/Trial";
+import Signin from "./pages/Auth/Signin/Signin";
+import Signup from "./pages/Auth/Signup/Signup";
+import SingleProduct from "./pages/SingleProduct/SingleProduct";
+import Landing from "./landing/Landing";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} alt="mockBee logo" width="180" height="180" />
-        <h1 className="brand-title">
-          Welcome to <span>mockBee!</span>
-        </h1>
-        <p className="brand-description">
-          Get started by editing <code>src/App.js</code>
-        </p>
-        <div className="links">
-          <a
-            href="https://mockbee.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Explore mockBee
-          </a>
-          <a
-            href="https://mockbee.netlify.app/docs/api/introduction"
-            target="_blank"
-            rel="noreferrer"
-          >
-            API Documentation
-          </a>
-          <a
-            href="https://github.com/neogcamp/mockBee"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Contribute
-          </a>
-        </div>
-      </header>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/mockman" element={<Mockman />} />
+        <Route path="/shop" element={<AllProduct />} />
+        <Route path="/helpme" element={<Help />} />
+        <Route path="/reviews" element={<Reviews />} />
+        <Route path="/trial" element={<Trial />} />
+        <Route path="/products" element={<AllProduct />} />
+        <Route path="/product/:productId" element={<SingleProduct />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   );
 }
