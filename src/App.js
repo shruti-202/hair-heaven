@@ -3,7 +3,6 @@ import Mockman from "mockman-js";
 import { Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navbar/Navigation";
 import AllProduct from "./pages/Product/AllProduct";
-import NotFound from "./pages/404/404";
 import Help from "./pages/Help/Help";
 import Reviews from "./pages/Reviews/Reviews";
 import Trial from "./pages/Trial/Trial";
@@ -11,6 +10,7 @@ import Signin from "./pages/Auth/Signin/Signin";
 import Signup from "./pages/Auth/Signup/Signup";
 import SingleProduct from "./pages/SingleProduct/SingleProduct";
 import Landing from "./landing/Landing";
+import NotFound from "./pages/404/NotFound";
 
 function App() {
   return (
