@@ -24,7 +24,7 @@ function AllProduct() {
     <>
       <div className="all-product">
         <div className="filter-container">
-          <h1 className="filter-heading">Filters</h1>
+        
         </div>
         <div className="product-container">
           <h4 className="all-product-heading">Showing All Products</h4>
